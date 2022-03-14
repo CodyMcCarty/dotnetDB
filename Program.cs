@@ -30,5 +30,8 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Add the CreateDbInNotExists method call
+app.CreateDbIfNotExists();
 
 app.Run();
+
+// TODO: complete up to Reverse engineering https://docs.microsoft.com/en-us/learn/modules/persist-data-ef-core/5-test-db-operations
