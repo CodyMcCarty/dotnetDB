@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\cmccarty\\Code\\7 CsharpBench\\MSLearn2\\persistDB\\mslearn-persist-data-ef-core\\ContosoPizza\\ContosoPizza.csproj": {}
+    "C:\\Users\\cmccarty\\Code\\7 CsharpBench\\MSLearn2\\persistDB\\mslearn-persist-data-ef-core\\ContosoPizza\\ContosoPizza.csproj": {}
   },
   "projects": {
-    "c:\\Users\\cmccarty\\Code\\7 CsharpBench\\MSLearn2\\persistDB\\mslearn-persist-data-ef-core\\ContosoPizza\\ContosoPizza.csproj": {
+    "C:\\Users\\cmccarty\\Code\\7 CsharpBench\\MSLearn2\\persistDB\\mslearn-persist-data-ef-core\\ContosoPizza\\ContosoPizza.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\cmccarty\\Code\\7 CsharpBench\\MSLearn2\\persistDB\\mslearn-persist-data-ef-core\\ContosoPizza\\ContosoPizza.csproj",
+        "projectUniqueName": "C:\\Users\\cmccarty\\Code\\7 CsharpBench\\MSLearn2\\persistDB\\mslearn-persist-data-ef-core\\ContosoPizza\\ContosoPizza.csproj",
         "projectName": "ContosoPizza",
-        "projectPath": "c:\\Users\\cmccarty\\Code\\7 CsharpBench\\MSLearn2\\persistDB\\mslearn-persist-data-ef-core\\ContosoPizza\\ContosoPizza.csproj",
+        "projectPath": "C:\\Users\\cmccarty\\Code\\7 CsharpBench\\MSLearn2\\persistDB\\mslearn-persist-data-ef-core\\ContosoPizza\\ContosoPizza.csproj",
         "packagesPath": "C:\\Users\\cmccarty\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\cmccarty\\Code\\7 CsharpBench\\MSLearn2\\persistDB\\mslearn-persist-data-ef-core\\ContosoPizza\\obj\\",
+        "outputPath": "C:\\Users\\cmccarty\\Code\\7 CsharpBench\\MSLearn2\\persistDB\\mslearn-persist-data-ef-core\\ContosoPizza\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,16 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
