@@ -39,6 +39,18 @@ namespace ContosoPizza.Data
                     },
                 new Pizza
                     {
+                        Name = "Meat Lovers",
+                        Sauce = tomatoSauce,
+                        Toppings = new List<Topping>
+                            {
+                                pepperoniTopping,
+                                sausageTopping,
+                                hamTopping,
+                                chickenTopping
+                            }
+                    },
+                new Pizza
+                    {
                         Name = "Hawaiian",
                         Sauce = tomatoSauce,
                         Toppings = new List<Topping>

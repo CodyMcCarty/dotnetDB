@@ -9,16 +9,29 @@ namespace ContosoPizza.Controllers;
 public class PizzaController : ControllerBase
 {
     PizzaService _service;
-    
+
     public PizzaController(PizzaService service)
     {
         _service = service;
     }
 
+    // [HttpGet]
+    // public IEnumerable<Pizza> GetAll()
+    // {
+    //     return _service.GetAll();
+    // }
+
     [HttpGet]
-    public IEnumerable<Pizza> GetAll()
+    public ActionResult<List<Pizza>> GetAll(
+        string? name
+    )
     {
-        return _service.GetAll();
+        var pizzas = _service.GetAll().Where(p =>
+       (
+           (p.Name?.ToLower() == name?.ToLower() || name == null)
+       )).ToList();
+
+        return pizzas;
     }
 
     [HttpGet("{id}")]
@@ -26,7 +39,7 @@ public class PizzaController : ControllerBase
     {
         var pizza = _service.GetById(id);
 
-        if(pizza is not null)
+        if (pizza is not null)
         {
             return pizza;
         }
@@ -49,10 +62,10 @@ public class PizzaController : ControllerBase
     {
         var pizzaToUpdate = _service.GetById(id);
 
-        if(pizzaToUpdate is not null)
+        if (pizzaToUpdate is not null)
         {
             _service.AddTopping(id, toppingId);
-            return NoContent();    
+            return NoContent();
         }
         else
         {
@@ -65,10 +78,10 @@ public class PizzaController : ControllerBase
     {
         var pizzaToUpdate = _service.GetById(id);
 
-        if(pizzaToUpdate is not null)
+        if (pizzaToUpdate is not null)
         {
             _service.UpdateSauce(id, sauceId);
-            return NoContent();    
+            return NoContent();
         }
         else
         {
@@ -81,7 +94,7 @@ public class PizzaController : ControllerBase
     {
         var pizza = _service.GetById(id);
 
-        if(pizza is not null)
+        if (pizza is not null)
         {
             _service.DeleteById(id);
             return Ok();
